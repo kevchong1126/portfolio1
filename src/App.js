@@ -16,7 +16,7 @@ function App() {
     <div className="App">
       <AnimatePresence mode='wait'>
         <Routes location={location} key={location.pathname}>
-          <Route element={<Home />} path='/'/>
+          <Route element={<Home />} path='/portfolio'/>
           <Route element={<Projects />} path='/work' />
           <Route element={<About />} path='/me'/>
         </Routes>     

@@ -28,7 +28,7 @@ const Navbar = ({color, letter, animate=0, exit=0, duration=0}) => {
     <div className={styles.container}>
         <motion.ul className={styles.content} variants={animation} initial='initial' animate='animate' exit='exit'>
             <div className={styles.linkContainer}>
-                <Link to='/'><li className={styles.link} style={{backgroundColor:color || '#f0a050', color:letter || '#000'}}>HOME</li></Link>
+                <Link to='/portfolio'><li className={styles.link} style={{backgroundColor:color || '#f0a050', color:letter || '#000'}}>HOME</li></Link>
                 </div>
             <div className={styles.linkContainer}>
                 <Link to='/work'><li className={styles.link} style={{backgroundColor:color || '#f0a050', color:letter || '#000'}}>PROJECTS</li></Link>
