@@ -1,0 +1,64 @@
+@use '../../sass/variables' as *;
+@use '../../sass/breakpoints' as *;
+@use '../../sass/mixins' as *;
+
+.container{
+    position: absolute;
+    left: 0;
+    top: 0;
+    width: 100%;
+    z-index: 99;
+    overflow: hidden;
+    
+    .content{
+        width: 90%;
+        max-width: 800px;
+        margin: 0 auto;
+        display: none;
+        justify-content: space-around;
+        padding-top: $pd-l;
+
+        @include tablet{
+            display: flex;
+        }
+    }
+}
+
+.linkContainer{
+    cursor: pointer;
+
+    &:hover{
+        .link{
+            left: 0.3rem;
+            bottom: 0.2rem;
+        }
+        
+        .link::after{
+            left: -0.2rem;
+            top: 0.2rem;
+        }
+        
+    }
+    a{
+        color: black;
+    }
+    
+    .link{
+        position: relative;
+        font-family: 'Phudu';
+        padding: $pd-xs $pd-nm;
+        background-color: $bg-clr;
+        border: 1px solid black;
+    }
+
+    .link::after{
+        content: '';
+        position: absolute;
+        left: 0;
+        top: 0;
+        width: 100%;
+        height: 100%;
+        background-color: black;
+        z-index: -1;
+    }
+}

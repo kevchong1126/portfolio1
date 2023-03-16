@@ -1,0 +1,131 @@
+@use '../../sass/variables' as *;
+@use '../../sass/breakpoints' as *;
+@use '../../sass/mixins' as *;
+
+
+.container{
+    width: 100vw;
+    height: 100vh;
+    padding-top: 8rem;
+    overflow: hidden;
+    .content{
+        position: relative;
+        width: 100%;
+        height: 100%;
+        max-width: 1300px;
+        max-height: 800px;
+        margin: 0 auto;
+        padding-bottom: 5rem;
+        padding-left: $pd-s;
+        display: flex;
+        flex-direction: column;
+        justify-content: space-between;
+        font-size: $txt-s;
+    }
+}
+
+.nameContainer{
+    margin-bottom: $mg-s;
+    display: flex;
+    gap: $pd-l;
+    cursor: default;
+    font-size: $txt-nm;
+    overflow: hidden;
+
+    @include tablet{
+        font-size: $txt-xl;
+    }
+
+    @include breakpoint(1000px){
+        font-size: $txt-huge;
+    }
+}
+
+.viewProjects{
+    position: absolute;
+    top: 20%;
+    overflow: hidden;
+
+    .link{  
+        display: inline-block;
+        padding: $pd-nm;
+        color: $black;
+        border: 2px solid black;
+        font-family: 'Phudu';
+        
+        @include tablet{
+            padding: $pd-nm 0;
+            border: 0px solid black;
+            border-bottom: 2px solid black;
+        }
+
+        span{
+            position: relative;
+            font-weight: bolder;
+            @include transition
+        }
+
+        &:hover{
+            span{
+                padding-left: 0.5rem;
+            }
+        }
+    }
+}
+
+.developerContainer{
+    margin-bottom: $mg-s;
+    display: flex;
+    gap: $pd-l;
+    cursor: default;
+    overflow: hidden;
+    @include breakpoint(380px){
+        font-size: $txt-nm;
+    }
+    
+
+    @include tablet{
+        font-size: $txt-l;
+    }
+
+    @include desktop-sm{
+        font-size: $txt-xl;
+    }
+
+    @include breakpoint(1000px){
+        font-size: $txt-huge;
+    }
+}
+
+.socialMedia{
+    position: absolute;
+    bottom: 1rem;
+    display: flex;
+    gap: 1rem;
+    overflow: hidden;
+    a{
+        color: $black;
+    }
+    @include tablet{
+        top: 50%;
+        transform: translateY(-50%);
+        right: 2rem;
+        flex-direction: column;
+    }
+    .icon{
+        font-size: $txt-l;
+
+        @include desktop-sm{
+            font-size: $txt-xl;
+        }
+    }
+}
+@keyframes animate{
+    0%{
+        bottom: 1rem;
+    }
+    100%{
+        opacity: 1;
+        bottom: 0;
+    }
+}

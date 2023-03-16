@@ -1,0 +1,47 @@
+@use '../../sass/variables' as *;
+@use '../../sass/breakpoints' as *;
+@use '../../sass/mixins' as *;
+
+.container{
+    width: 100%;
+    height: 100%;
+    background-color: $black;
+    position: relative;
+    color: white;
+    font-size: $txt-nm;
+    padding-block: 15rem;
+    padding-inline: 2rem;
+    font-family: 'Phudu', cursive;
+    letter-spacing: 2px;
+    cursor: default;
+    overflow: hidden;
+    
+    @include breakpoint(370px){
+        font-size: $txt-l;
+    }
+    
+    @include tablet{
+        font-size: $txt-xl;
+    }
+
+    .content{
+        width: 100%;
+        max-width: 1300px;
+        margin: 0 auto;
+        display: flex;
+        flex-direction: column;
+        gap: 15rem;
+
+        div{
+
+            @include desktop-sm{
+                width: 50%;
+            }
+        }
+
+        .textRight{
+            align-self: flex-end;
+        }
+    }
+}
+

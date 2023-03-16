@@ -1,0 +1,94 @@
+@use '../../sass/variables' as *;
+@use '../../sass/breakpoints' as *;
+@use '../../sass/mixins' as *;
+
+.container{
+    position: absolute;
+    right: 2rem;
+    top: 0.7rem;
+    display: flex;
+    justify-content: flex-end;
+    padding-top: $pd-s;
+    padding-right: $pd-s;
+    z-index: 99;
+    overflow: hidden;
+
+    @include tablet{
+        display: none;
+    }
+
+}
+
+.hamburger{
+    position: relative;
+    width: 40px;
+    height: 40px;
+    display: flex;
+    flex-direction: column;
+    justify-content: center;
+    align-items: flex-end;
+    gap: 0.3rem;
+    z-index: 99;
+
+    .line{
+        position: relative;
+        display: inline-block;
+        width: 20px;
+        height: 2px;
+        background-color: gray;
+        
+        @include transition;
+    }
+
+    .line1{
+        position: relative;
+        display: inline-block;
+        width: 30px;
+        height: 2px;
+        background-color: gray;
+
+        @include transition
+    }
+}
+
+.hamburger.ahamburger{
+    
+    .line{
+        width: 30px;
+        transform: rotate(45deg);
+        top: 7px;
+        background-color: white;
+    }
+    .line1{
+        transform: rotate(135deg);
+        background-color: white;
+    }
+}
+
+.menu{
+    position: fixed;
+    left: 0;
+    top: 0;
+    width: 100%;
+    height: 100%;
+    clip-path: circle(0% at 100% 0);;
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    transition: clip-path 0.5s ease-in-out;
+    background-color: black;
+
+    a{
+        color: white;
+    }
+
+    .links{
+        li{
+            margin: $mg-s;
+        }
+    }
+}
+
+.menu.amenu{
+    clip-path: circle(70.7% at 50% 50%);
+}

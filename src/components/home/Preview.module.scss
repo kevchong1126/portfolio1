@@ -1,0 +1,20 @@
+@use '../../sass/variables' as *;
+@use '../../sass/breakpoints' as *;
+@use '../../sass/mixins' as *;
+
+.container{
+    position: absolute;
+    width: 350px;
+    height: 350px;
+    z-index: 99;
+    .imgWrapper{
+        width: 100%;
+        height: 100%;
+
+        img{
+            width: 100%;
+            height: 100%;
+            object-fit: cover;
+        }
+    }
+}

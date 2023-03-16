@@ -1,0 +1,61 @@
+@use '../../sass/variables' as *;
+@use '../../sass/breakpoints' as *;
+@use '../../sass/mixins' as *;
+
+.container{
+    padding-top: 40vh;
+    display: flex;
+    flex-direction: column;
+    align-items: center;
+    gap: 18rem;
+    font-family: 'Anton', sans-serif;
+    font-size: $txt-nm;
+    font-weight: bold;
+    cursor: default;
+
+    @include breakpoint(380px){
+        font-size: $txt-l;
+    }
+
+    @include desktop-sm{
+        font-size: $txt-huge;
+    }
+
+    .text{
+        letter-spacing: 2px;
+    }
+
+    .wordsContainer{
+        width: 98vw;
+        max-width: 1300px;
+        display: flex;
+        flex-direction: column;
+        gap: 3rem;
+        font-size: $txt-l;
+        color: $gray-2;
+        font-family: 'Climate Crisis', cursive;
+        letter-spacing: 1px;
+
+        @include tablet{
+            font-size: 2rem;
+        }
+        @include desktop-sm{
+            font-size: 3.5rem;
+        }
+        @include desktop-l{
+            font-size: 5rem;
+        }
+
+        .wordRight{
+            text-align: center;
+            transform: translateX(100%);  
+        }
+        .wordRight1{
+            transform: translateX(190%);  
+        }
+        .wordLeft{
+            text-align: center;
+            transform: translateX(-100%);
+        }
+    }
+}

@@ -1,0 +1,23 @@
+@use '../sass/variables' as *;
+@use '../sass/breakpoints' as *;
+@use '../sass/mixins' as *;
+
+.container{
+    position: relative;
+    width: 100%;
+    overflow-x: hidden;
+
+    .transition{
+        position: fixed;
+        left: 0;
+        top: 0;
+        width: 100vw;
+        height: 100vh;
+        background-color: $black;//#8B7E74#434242
+        
+    }
+
+    .content{
+        z-index: 2;
+    }
+}

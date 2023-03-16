@@ -1,0 +1,10 @@
+
+@mixin resetBtn{
+    background-color: transparent;
+    border: none;
+    outline: none;
+}
+
+@mixin transition($property: all, $duration: 0.3s, $ease: ease){
+    transition: $property $duration $ease;
+}
