@@ -32,13 +32,13 @@ const Container3 = () => {
                 <p className={style.desc}>I thought I wanted to be a civil engineer</p>
             </div>
             <div className={style.text} ref={el => containers.current.push(el)}>
-                <p className={style.desc}>But then, COVID put us in lockdown,</p>
+                <p className={style.desc}>But then, COVID ruined all my plans,</p>
             </div>
             <div className={style.textRight} ref={el => containers.current.push(el)}>
                 <p className={style.desc}>Which left me even more confused...</p>
             </div>
             <div className={style.text} ref={el => containers.current.push(el)}> 
-                <p className={style.desc}>So, I Somehow stumbled upon programming</p>
+                <p className={style.desc}>So, I somehow stumbled upon programming</p>
             </div>
             <div className={style.textRight} ref={el => containers.current.push(el)}>
                 <p className={style.desc}>I started coding for fun and enjoyed it a lot.</p>
