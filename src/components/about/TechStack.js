@@ -83,7 +83,7 @@ const TechStack = () => {
 
             <div className={style.social}>
               <a href='https://github.com/kevchong1126' target='_blank' rel="noreferrer" ref={el => links.current.push(el)}><AiFillGithub className={style.icon} /></a>
-              <a href='https://www.linkedin.com/in/kevin-chong-undefined-49478526a/' target='_blank' rel="noreferrer" ref={el => links.current.push(el)}><AiFillLinkedin className={style.icon} /></a>
+              <a href='https://www.linkedin.com/in/kevin-chong-ng-49478526a/' target='_blank' rel="noreferrer" ref={el => links.current.push(el)}><AiFillLinkedin className={style.icon} /></a>
               <a href="mailto: kechng123x@gmail.com" ref={el => links.current.push(el)} className={style.email}>kechng123x@gmail.com</a>
             </div>
           </div>

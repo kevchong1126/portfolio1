@@ -89,7 +89,7 @@ const Hero = () => {
 
             <ul className={styles.socialMedia}>
               <motion.li variants={animation3} initial='initial' animate='animate' exit='exit'  transition={{delay:delay2, ease:'linear'}}><a href='https://github.com/kevchong1126' target='_blank' rel="noreferrer"><AiFillGithub className={styles.icon}/></a></motion.li>
-              <motion.li variants={animation3} initial='initial' animate='animate' exit='exit'  transition={{delay:delay2, ease:'linear'}}><a href='https://www.linkedin.com/in/kevin-chong-undefined-49478526a/' target='_blank' rel="noreferrer"><AiFillLinkedin className={styles.icon}/></a></motion.li>
+              <motion.li variants={animation3} initial='initial' animate='animate' exit='exit'  transition={{delay:delay2, ease:'linear'}}><a href='https://www.linkedin.com/in/kevin-chong-ng-49478526a/' target='_blank' rel="noreferrer"><AiFillLinkedin className={styles.icon}/></a></motion.li>
             </ul>
         </div>
 
