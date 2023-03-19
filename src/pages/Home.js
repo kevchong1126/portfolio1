@@ -8,7 +8,7 @@ const Home = () => {
   return (
     <div className={style.container}>
         <div className={style.content}>
-            <Navbar animate='0.6' exit='0.6' duration='0.3'/>
+            <Navbar animate='0.6' exit='0.6' duration='0.5'/>
             <MobileNavbar />
             <Hero />
         </div>
