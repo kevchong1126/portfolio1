@@ -5,6 +5,7 @@ import img2 from '../../img/backstage.jpg'
 import img3 from '../../img/bonsai.jpg'
 import img4 from '../../img/instrument.jpg'
 import img5 from '../../img/redsquare.jpg'
+import { motion } from 'framer-motion'
 
 const images = [img1, img2, img3, img4, img5];
 
@@ -23,11 +24,11 @@ const Preview = ({x, y}) => {
     }, [idx])
 
   return (
-    <div className={style.container} style={{left:`${x+50}px`, top:`${50+(y%100)}px`}}>
+    <motion.div initial={{opacity:0}} animate={{opacity:1, transition:{duration:0.3, delay:0.2}}} exit={{opacity:0, transition:{duration:0.2}}} className={style.container} style={{left:`${x+50}px`, top:`${50+(y%100)}px`}}>
         <div className={style.imgWrapper}>
             <img src={images[idx]} alt='project' />
         </div>
-    </div>
+    </motion.div>
   )
 }
 

@@ -112,14 +112,14 @@ const List = () => {
             <div className={style.previewContainer} style={{left: `${x+100}px`, top:`${y-300}px`}}>
                 {
                     images[currImg] && 
-                    <>
+                    <motion.div initial={{opacity:0}} animate={{opacity:1, transition:{duration:0.5, delay:0.2}}} exit={{opacity:1, transition:{duration:0.1}}} >
                         <img src={images[currImg]} alt='sda'></img>
                         <div className={style.desc}>
                             {
                             descriptions[currImg]
                             }
                         </div>
-                    </>
+                    </motion.div>
                 }
             </div>
 
