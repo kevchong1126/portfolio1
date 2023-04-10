@@ -28,7 +28,7 @@ const MobileNavbar = () => {
 
         <div className={`${styles.menu} ${isOpen ? styles.amenu : ''}`}>
             <ul className={styles.links}>
-                <Link to='/portofolio'><li>HOME</li></Link>
+                <Link to='/portfolio'><li>HOME</li></Link>
                 <Link to='/work'><li>PROJECTS</li></Link>
                 <Link to='/me'><li>ME</li></Link>
             </ul>

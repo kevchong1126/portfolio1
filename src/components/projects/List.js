@@ -5,7 +5,7 @@ import img1 from '../../img/laraya.jpg'
 import img2 from '../../img/backstage.jpg'
 import img3 from '../../img/bonsai.jpg'
 import img4 from '../../img/instrument.jpg'
-import img5 from '../../img/redsquare.jpg'
+import img5 from '../../img/imageeditor.jpg'
 
 import { motion } from 'framer-motion'
 
@@ -14,7 +14,7 @@ const descriptions = [
     'Website clone. Includes background color change depending on current scroll and a snapping scroll. Built with plain JS, HTML and CSS',
     'Website clone. Bonsai is a finance management company; its layout contains a multi level dropdown list and an accordion container',
     'Website clone. Website with really cool design. Its animations were recreated with help of Intersection Observer.',
-    'Website clone. It has an interval that changes the source of an image. It also uses different libraries for other functionalities'
+    'Users can upload images, draw in the canvas and download edited pictures. Built with React and Canvas API'
 ]
 
 const images = [img1, img2, img3, img4, img5];
@@ -53,9 +53,9 @@ const List = () => {
 
             <motion.ul className={style.list} variants={framer} initial='initial' animate='animate' exit='exit'>
                 <li className={style.project} onMouseLeave={mouseLeaveHandler} onMouseEnter={el => setCurrImg(0)}>
-                <a href='https://kevchong1126.github.io/laraya/' target='_blank' rel="noreferrer"><h3>LA RAYA -></h3></a>
+                <a href='https://kevchong1126.github.io/laraya/' target='_blank' rel="noreferrer"><h3>ECOMMERCE -></h3></a>
                     <div className={style.mobilePreview}>
-                        <img src={img1} alt='Raya' />
+                        <img src={img1} alt='ecommerce website' />
                         <p>
                             {
                                 descriptions[0]
@@ -63,8 +63,19 @@ const List = () => {
                         </p>
                     </div>
                 </li>
+                <li className={style.project} onMouseLeave={mouseLeaveHandler} onMouseEnter={el => setCurrImg(4)}>
+                    <a href='https://kevchong1126.github.io/image-editor/' target='_blank' rel="noreferrer"><h3>IMAGE EDITOR -></h3></a>
+                    <div className={style.mobilePreview}>
+                        <img src={img5} alt='editor' />
+                        <p>
+                            {
+                                descriptions[4]
+                            } 
+                        </p>
+                    </div>
+                </li>
                 <li className={style.project} onMouseLeave={mouseLeaveHandler} onMouseEnter={el => setCurrImg(1)}>
-                <a href='https://kevchong1126.github.io/backstage/' target='_blank' rel="noreferrer"><h3>BACKSTAGE -></h3></a>
+                <a href='https://kevchong1126.github.io/backstage/' target='_blank' rel="noreferrer"><h3>LANDING PAGE -></h3></a>
                     <div className={style.mobilePreview}>
                         <img src={img2} alt='Backstage' />
                         <p>
@@ -74,8 +85,9 @@ const List = () => {
                         </p>
                     </div>
                 </li>
+                
                 <li className={style.project} onMouseLeave={mouseLeaveHandler} onMouseEnter={el => setCurrImg(2)}>
-                    <a href='https://kevchong1126.github.io/bonsai/' target='_blank' rel="noreferrer"><h3>BONSAI -></h3></a>
+                    <a href='https://kevchong1126.github.io/bonsai/' target='_blank' rel="noreferrer"><h3>LANDING PAGE -></h3></a>
                     <div className={style.mobilePreview}>
                         <img src={img3} alt='Bonsai' /> 
                         <p>
@@ -86,7 +98,7 @@ const List = () => {
                     </div>
                 </li>
                 <li className={style.project} onMouseLeave={mouseLeaveHandler} onMouseEnter={el => setCurrImg(3)}>
-                <a href='https://kevchong1126.github.io/instrument/' target='_blank' rel="noreferrer"><h3>INSTRUMENT -></h3></a> 
+                <a href='https://kevchong1126.github.io/instrument/' target='_blank' rel="noreferrer"><h3>LANDING PAGE -></h3></a> 
                     <div className={style.mobilePreview}>
                         <img src={img4} alt='Instrument' />
                         <p>
@@ -96,17 +108,7 @@ const List = () => {
                         </p>
                     </div>
                 </li>
-                <li className={style.project} onMouseLeave={mouseLeaveHandler} onMouseEnter={el => setCurrImg(4)}>
-                <a href='https://kevchong1126.github.io/redsquare/' target='_blank' rel="noreferrer"><h3>REDSQUARE -></h3></a>
-                    <div className={style.mobilePreview}>
-                        <img src={img5} alt='Redsquare' />
-                        <p>
-                            {
-                                descriptions[4]
-                            } 
-                        </p>
-                    </div>
-                </li>
+                
             </motion.ul>
 
             <div className={style.previewContainer} style={{left: `${x+100}px`, top:`${y-300}px`}}>

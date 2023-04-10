@@ -4,7 +4,7 @@ import img1 from '../../img/laraya.jpg'
 import img2 from '../../img/backstage.jpg'
 import img3 from '../../img/bonsai.jpg'
 import img4 from '../../img/instrument.jpg'
-import img5 from '../../img/redsquare.jpg'
+import img5 from '../../img/imageeditor.jpg'
 import { motion } from 'framer-motion'
 
 const images = [img1, img2, img3, img4, img5];
